@@ -5,36 +5,44 @@ import no.hvl.dat100.jplab11.oppgave1.*;
 
 public class Tekst extends Innlegg {
 
-	// TODO: objektvariable 
-	
+	String Tekstavtekst;
+	int likesavtekst;
+
+
 	public Tekst () {
 		
 	}
 	
 	public Tekst(int id, String bruker, String dato, String tekst) {
-		throw new UnsupportedOperationException(TODO.constructor("Tekst"));
-	}
+		super  (id,bruker,dato);
+		Tekstavtekst = tekst;	
+}
 	
 	public Tekst(int id, String bruker, String dato, int likes, String tekst) {
-		throw new UnsupportedOperationException(TODO.constructor("Tekst"));
+		super(id,bruker, dato, likes);
+		Tekstavtekst = tekst;
+		likesavtekst = likes;
+		
 	}
-	
-	public String getTekst() {
-		throw new UnsupportedOperationException(TODO.method());
-
+		public String getTekst() {
+		
+      return Tekstavtekst;
 	}
 
 	public void setTekst(String tekst) {
-		throw new UnsupportedOperationException(TODO.method());
+		Tekstavtekst = tekst;
+ 
 	}
 
 	@Override
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method());
-
+		String TekstString = null;
+		TekstString = super.toString();
+		TekstString = "TEKST" + "\n" + TekstString + Tekstavtekst;
+		
+return TekstString;
 	}
 	
-	// Metoden nedenfor er kun for valgfri oppgave 6
 	public String toHTML() {
 			
 		throw new UnsupportedOperationException(TODO.method());
